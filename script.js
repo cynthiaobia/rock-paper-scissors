@@ -87,6 +87,13 @@ function game(){
         }
         console.log(winnerString + " You: " + playerScore + ", Computer: " + computerScore + ", Tie: " + tieScore)
     }
+    if (playerScore > computerScore){
+      console.log("Game over. You Win!");
+    } else if (computerScore > playerScore){
+        console.log("Game over. You Lose!");
+    } else {
+        console.log("It was close, but it looks like it's a tie!");
+    }
     //Reset Game
     playerScore = 0;
     computerScore = 0;

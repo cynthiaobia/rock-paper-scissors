@@ -87,6 +87,7 @@ function game(){
         }
         console.log(winnerString + " You: " + playerScore + ", Computer: " + computerScore + ", Tie: " + tieScore)
     }
+    //Reset Game
     playerScore = 0;
     computerScore = 0;
     tieScore = 0;

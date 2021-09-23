@@ -11,7 +11,8 @@ function computerPlay(){
 }
 
 //Play a single round
-let playerSelection = "scIssOrs";
+//let playerSelection = "scIssOrs";
+let playerSelection;
 let computerSelection;
 let playerWins;
 let computerWins;
@@ -75,6 +76,7 @@ let winnerString;
 
 function game(){
     for (let i = 1; i <= 5; i++){
+        playerSelection = prompt("Make a selection: ");
         winnerString = playRound(playerSelection, computerSelection);
         if (playerWins === true){
             playerScore += 1;
@@ -85,4 +87,7 @@ function game(){
         }
         console.log(winnerString + " You: " + playerScore + ", Computer: " + computerScore + ", Tie: " + tieScore)
     }
+    playerScore = 0;
+    computerScore = 0;
+    tieScore = 0;
 }

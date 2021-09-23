@@ -75,13 +75,14 @@ let winnerString;
 
 function game(){
     for (let i = 1; i <= 5; i++){
-    winnerString = playRound(playerSelection, computerSelection);
-    if (playerWins === true){
-        playerScore += 1;
-    } else if (computerWins === true){
-        computerScore += 1;
-    } else if (tie === true){
-        tieScore += 1;
+        winnerString = playRound(playerSelection, computerSelection);
+        if (playerWins === true){
+            playerScore += 1;
+        } else if (computerWins === true){
+            computerScore += 1;
+        } else if (tie === true){
+            tieScore += 1;
+        }
+        console.log(winnerString + " You: " + playerScore + ", Computer: " + computerScore + ", Tie: " + tieScore)
     }
-    return (winnerString + " You: " + playerScore + ", Computer: " + computerScore + ", Tie: " + tieScore)
-}}
+}

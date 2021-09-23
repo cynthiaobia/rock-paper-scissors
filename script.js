@@ -17,14 +17,27 @@ let computerSelection;
 function playRound(playerSelection, computerSelection){
     computerSelection = computerPlay();
     if (playerSelection.toLowerCase() === computerSelection){
-        return "tie!" ;
-    } else {
-        return "no tie, computer chose " + computerSelection;
+        return "It's a tie!" ;
+    } else if (playerSelection.toLowerCase() === "rock"){
+        if (computerSelection === "scissors"){
+          return "You win! Rock beats scissors!"
+        } 
+        else if (computerSelection === "paper"){
+          return "Computer wins! Paper beats scissors!"
+        }
+    } else if (playerSelection.toLowerCase() === "paper"){
+        if (computerSelection === "rock"){
+          return "You win! Paper beats rock!"
+        } 
+        else if (computerSelection === "scissors"){
+          return "Computer wins! Scissors beats paper!"
+        }
+    } else if (playerSelection.toLowerCase() === "scissors"){
+        if (computerSelection === "paper"){
+          return "You win! Scissors beats paper!"
+        } 
+        else if (computerSelection === "rock"){
+          return "Computer wins! Rock beats scissors!"
+        }
     }
 }
-
-
-
-
-
-
